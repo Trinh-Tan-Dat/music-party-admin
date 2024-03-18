@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import Dashboard from './pages/Dashboard';
+import SignIn from './pages/SignIn';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Navbar from './components/Navbar';
 import './App.css';
-
-function App() {
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from 'react';
+const App = () => {
+  const [showNav, setShowNav] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <header>
+          <GiHamburgerMenu onClick={()=>setShowNav(!showNav)}/>
+        </header>
+        <Navbar show={showNav} />
+        <div className='main'>
+          <Routes>
+            <Route path='/' exact={true} Component={Dashboard} />
+            <Route path='/signin' exact={true} Component={SignIn} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
 
