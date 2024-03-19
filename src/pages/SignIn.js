@@ -1,9 +1,14 @@
 import React from 'react';
 import Button from '../components/Button';
-
+import { FaMusic } from 'react-icons/fa';
 const SignIn = () => {
     return (
-        <div className="flex justify-center items-center h-screen" style={{backgroundColor: '#242424'}}>
+        <main style={{backgroundColor: "#242424"}}>
+            <h1 className="text-green-500 font-bold text-xl hover:text-green-400 cursor-pointer ml-6" >
+                <FaMusic className="inline-block mr-2" />
+                Music Party
+            </h1>
+        <div className="flex justify-center items-center h-screen" style={{ backgroundColor: '#242424' }}>
             <div className="bg-red-500 shadow-md rounded px-8 pt-6 pb-8 mb-4" style={{ backgroundColor: '#121212' }}>
                 <h1 className="text-2xl font-bold mb-8 "style={{color: 'white'}}>Sign In</h1>
                 <form>
@@ -36,7 +41,8 @@ const SignIn = () => {
                     </div>
                 </form>
             </div>
-        </div>
+            </div>
+            </main>
     );
 }
 
