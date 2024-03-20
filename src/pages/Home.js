@@ -1,54 +1,54 @@
 import React from 'react'
 import 
+{ BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill}
+ from 'react-icons/bs'
+ import 
  { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
  from 'recharts';
-import { FaMusic } from 'react-icons/fa';
-import { FaList } from 'react-icons/fa';
-import { FaPersonBooth } from 'react-icons/fa';
-import { FaBell } from 'react-icons/fa';
-function Dashboard() {
+
+function Home() {
 
     const data = [
         {
-          name: '12',
+          name: 'Page A',
           uv: 4000,
-          customers: 2400,
+          pv: 2400,
           amt: 2400,
         },
         {
-          name: '1',
+          name: 'Page B',
           uv: 3000,
-          customers: 1398,
+          pv: 1398,
           amt: 2210,
         },
         {
-          name: '2',
+          name: 'Page C',
           uv: 2000,
-          customers: 9800,
+          pv: 9800,
           amt: 2290,
         },
         {
-          name: '3',
+          name: 'Page D',
           uv: 2780,
-          customers: 3908,
+          pv: 3908,
           amt: 2000,
         },
         {
-          name: '4',
+          name: 'Page E',
           uv: 1890,
-          customers: 4800,
+          pv: 4800,
           amt: 2181,
         },
         {
-          name: '5',
+          name: 'Page F',
           uv: 2390,
-          customers: 3800,
+          pv: 3800,
           amt: 2500,
         },
         {
-          name: '6',
+          name: 'Page G',
           uv: 3490,
-          customers: 4300,
+          pv: 4300,
           amt: 2100,
         },
       ];
@@ -57,35 +57,35 @@ function Dashboard() {
   return (
     <main className='main-container' style={{backgroundColor:"#242424"}}>
         <div className='main-title'>
-            <h3>DASHBOARD</h3>
+            <h3>Home</h3>
         </div>
 
         <div className='main-cards'>
             <div className='card'>
                 <div className='card-inner'>
                     <h3>PRODUCTS</h3>
-                    <FaMusic className='card_icon'/>
+                    <BsFillArchiveFill className='card_icon'/>
                 </div>
                 <h1>300</h1>
             </div>
             <div className='card'>
                 <div className='card-inner'>
                     <h3>CATEGORIES</h3>
-                    <FaList className='card_icon'/>
+                    <BsFillGrid3X3GapFill className='card_icon'/>
                 </div>
                 <h1>12</h1>
             </div>
             <div className='card'>
                 <div className='card-inner'>
                     <h3>CUSTOMERS</h3>
-                    <FaPersonBooth className='card_icon'/>
+                    <BsPeopleFill className='card_icon'/>
                 </div>
                 <h1>33</h1>
             </div>
             <div className='card'>
                 <div className='card-inner'>
                     <h3>ALERTS</h3>
-                    <FaBell className='card_icon'/>
+                    <BsFillBellFill className='card_icon'/>
                 </div>
                 <h1>42</h1>
             </div>
@@ -109,7 +109,8 @@ function Dashboard() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="customers" fill="#1FDF64" />
+                <Bar dataKey="pv" fill="#8884d8" />
+                <Bar dataKey="uv" fill="#82ca9d" />
                 </BarChart>
             </ResponsiveContainer>
 
@@ -130,7 +131,8 @@ function Dashboard() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="customers" stroke="#1FDF64" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                 </LineChart>
             </ResponsiveContainer>
 
@@ -139,4 +141,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default Home

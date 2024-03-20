@@ -4,25 +4,38 @@ import SignIn from './pages/SignIn';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './App.css';
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FaMusic } from 'react-icons/fa';
 import { useState } from 'react';
+import Pending from './pages/Pending';
+import Header from './components/Header';
+import Home from './pages/Home';
 const App = () => {
-  const [showNav, setShowNav] = useState(false);
+    const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
+    const [openSidebar, setOpenSidebar] = useState(false)
+    const OpenSidebar = () => {
+      setOpenSidebarToggle(!openSidebarToggle)
+    }
+ 
   return (
-    <>
-      <Router>
-        <header>
-          <GiHamburgerMenu onClick={()=>setShowNav(!showNav)}/>
-        </header>
-        <Navbar show={showNav} />
-        <div className='main'>
+      <div>
+      <div className='grid-container'>
+        <Header OpenSidebar={OpenSidebar}/>
+        {        <Navbar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+}
+        <Router>
           <Routes>
-            <Route path='/' exact={true} Component={Dashboard} />
-            <Route path='/signin' exact={true} Component={SignIn} />
+            {/* <Route path='/signin' element={<SignIn />}  /> */}
+            <Route path='/' element={<Home />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/pending' element={<Pending />} />
+            <Route path='/signin' element={<SignIn />} />
           </Routes>
-        </div>
-      </Router>
-    </>
+        </Router>
+      </div>
+      
+      </div>
+
+    
   );
 }
 
