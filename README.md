@@ -46,13 +46,13 @@ Music Party is a project aimed at `redefining` the `music streaming experience` 
 3. Run the following command to clone the code:
 
 ```
-git clone https://github.com/cmwuaan/music-party-frontend
+git clone https://github.com/Trinh-Tan-Dat/party-music-admin.git
 ```
 
 4. Once the code is cloned, navigate into the project directory using the following command:
 
 ```
-cd music-party-frontend
+cd music-party-admin
 ```
 
 5. Next, you need to install any dependencies required by the project. To do this, run the following command:
@@ -99,8 +99,11 @@ With these technologies, we are extremely confident in developing our ideas:
 - ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 <h2 id="contributor">Contributors🤝</h2>
-<a href="https://github.com/Trinh-Tan-Dat/music-party-admin/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Trinh-Tan-Dat/music-party-admin" />
+<a href="https://github.com/Trinh-Tan-Dat">
+  <img src="https://contrib.rocks/image?repo=Trinh-Tan-Dat/JDBC-Student-Management." />
+</a>
+<a href="https://github.com/cmwuaan/music-party-frontend/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontend" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
