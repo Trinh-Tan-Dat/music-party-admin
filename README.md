@@ -99,8 +99,8 @@ With these technologies, we are extremely confident in developing our ideas:
 - ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 <h2 id="contributor">Contributors🤝</h2>
-<a href="https://github.com/cmwuaan/music-party-frontend/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontend" />
+<a href="https://github.com/Trinh-Tan-Dat/music-party-admin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Trinh-Tan-Dat/music-party-admin" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
