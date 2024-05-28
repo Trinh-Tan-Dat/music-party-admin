@@ -12,9 +12,11 @@ const LoginPage = () => {
         e.preventDefault(); // Prevent the default form submission
         try {
             const response = await loginAdmin(username, password);
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
             if (response.status === 200) {
                 setAuthUser(response.dataRes.data);
-                window.location.href = 'https://music-party-admin.vercel.app/';
+                window.location.href = 'https://music-party-admin.vercel.app';
             }
             else {
                 alert("Login failed");
