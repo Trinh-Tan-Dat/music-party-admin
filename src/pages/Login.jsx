@@ -2,7 +2,7 @@ import { loginAdmin } from 'api/AuthApi';
 import { useAuth } from 'contexts/AuthContext';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginCheckLogin } from 'api/AuthApi';
+
 const LoginPage = () => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
@@ -12,14 +12,9 @@ const LoginPage = () => {
         e.preventDefault(); // Prevent the default form submission
         try {
             const response = await loginAdmin(username, password);
-            localStorage.setItem('username', username);
-            localStorage.setItem('password', password);
             if (response.status === 200) {
                 setAuthUser(response.dataRes.data);
-                window.location.href = 'https://music-party-admin.vercel.app';
-                localStorage.setItem('accessToken', response.dataRes.user.accessToken)
-                alert(response.dataRes.user.accessToken);
-
+                window.location.href = 'http://localhost:3001';
             }
             else {
                 alert("Login failed");

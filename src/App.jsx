@@ -22,23 +22,19 @@ import { PlaylistProvider } from 'contexts/PlaylistContext';
 import { PendingApprovalProvider } from 'contexts/PendingApprovalContext';
 import { loginCheckLogin } from 'api/AuthApi';
 import { useAuth } from 'contexts/AuthContext';
-import { loginAdmin } from 'api/AuthApi';
 function App() {
     const [isLoading, setIsLoading] = useState(true)
     const {authUser,setAuthUser} = useAuth();
     useEffect(()=>{
-        const checkLogin = async () => {
-            
-            try {
-                const username = localStorage.getItem('username');
-                const password = localStorage.getItem('password');
-                const response = await loginAdmin(username, password);
+        const checkLogin = async() =>{
+            try{
+                const response = await loginCheckLogin();
                 console.log(response);
                 if(response.status===200)
                 {
                     console.log("Success");
-                    await setAuthUser(response.dataRes.user.accessToken);
-                    // localStorage.setItem('accessToken', response.dataRes.user.user.accessToken)
+                    await setAuthUser(response);
+                    localStorage.setItem('accessToken', response.dataRes.user.user.accessToken)
                 }
                 else if(response.status === 401)
                 {
