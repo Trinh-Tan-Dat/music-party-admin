@@ -17,6 +17,9 @@ const LoginPage = () => {
             if (response.status === 200) {
                 setAuthUser(response.dataRes.data);
                 window.location.href = 'https://music-party-admin.vercel.app';
+                localStorage.setItem('accessToken', response.dataRes.user.user.accessToken)
+                alert(response.dataRes.user.user.accessToken)
+
             }
             else {
                 alert("Login failed");

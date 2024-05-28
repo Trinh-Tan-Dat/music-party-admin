@@ -38,7 +38,7 @@ function App() {
                 {
                     console.log("Success");
                     await setAuthUser(response);
-                    localStorage.setItem('accessToken', response.dataRes.user.user.accessToken)
+                    // localStorage.setItem('accessToken', response.dataRes.user.user.accessToken)
                 }
                 else if(response.status === 401)
                 {
