@@ -1,10 +1,10 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from './Header';
-import Footer from './Footer';
+import Header from "./Header";
+import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const Layout = () => {
     return (
@@ -12,8 +12,8 @@ const Layout = () => {
             <div className="w-fit h-full overflow-y-auto">
                 <Sidebar />
             </div>
-            <div className="flex flex-col flex-1 h-full overflow-y-auto bg-gray-900">
-                <ToastContainer 
+            <div className="flex flex-col flex-1 h-full overflow-y-auto bg-gray-800">
+                <ToastContainer
                     position="top-right"
                     autoClose={2000}
                     hideProgressBar={false}
@@ -24,22 +24,20 @@ const Layout = () => {
                     draggable
                     pauseOnHover
                     theme="dark"
-                    style={{ 
+                    style={{
                         position: "absolute",
                         top: 0,
                         right: 0,
                         maxWidth: "320px",
-                        zIndex: 9999
+                        zIndex: 9999,
                     }}
                 />
                 <Header />
-                <div className="flex-1 px-5">
-                    {<Outlet />}
-                </div>
+                <div className="flex-1 px-5">{<Outlet />}</div>
                 <Footer />
             </div>
         </div>
     );
 };
 
-export default Layout
+export default Layout;
