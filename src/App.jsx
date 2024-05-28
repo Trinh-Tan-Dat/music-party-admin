@@ -37,7 +37,7 @@ function App() {
                 if(response.status===200)
                 {
                     console.log("Success");
-                    await setAuthUser(response);
+                    await setAuthUser(response.dataRes.user.accessToken);
                     // localStorage.setItem('accessToken', response.dataRes.user.user.accessToken)
                 }
                 else if(response.status === 401)
