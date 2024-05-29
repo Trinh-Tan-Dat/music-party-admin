@@ -1,5 +1,5 @@
 // api.js
-const API_URL = 'http://localhost:8081';
+const API_URL = 'https://music-party-backend-provision.vercel.app';
 const defaultHeaders = {
   Accept: 'application/json',
   'Content-Type': 'application/json',
