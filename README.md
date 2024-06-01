@@ -137,9 +137,17 @@ The Music Party Admin Dashboard provides several key features to ensure efficien
 <h2 id="technologies">Technologies🤖</h2>
 The project leverages powerful web technologies to deliver a high-performance, responsive, and efficient admin dashboard.
 
-React
-Tailwind
-NodeJS
+<ul>
+  <li><strong>React:</strong> A JavaScript library for building user interfaces, ensuring a dynamic and responsive user experience.</li>
+  <li><strong>Tailwind:</strong> A utility-first CSS framework that allows for rapid UI development with customizable design elements.</li>
+  <li><strong>NodeJS:</strong> A JavaScript runtime that provides the backend infrastructure needed for server-side operations and API handling.</li>
+</ul>
+
+<h2 id="domain">Deployment ✈</h2>
+The Music Party Admin Dashboard is deployed using Vercel, ensuring a seamless and scalable hosting solution.
+
+<a href="https://music-party-admin.vercel.app/">Access the deployed application here</a>
+
 <h2 id="contributors">Contributors🤝</h2>
 <a href="https://github.com/Trinh-Tan-Dat">
   <img src="https://contrib.rocks/image?repo=Trinh-Tan-Dat/JDBC-Student-Management." />
@@ -148,3 +156,4 @@ NodeJS
   <img src="https://contrib.rocks/image?repo=cmwuaan/music-party-frontend" />
 </a>
 <p>Made with <a href="https://contrib.rocks">contrib.rocks</a>.</p>
+
